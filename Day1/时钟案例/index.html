@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+
+    
+    <title>index首页</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .box div{
+            float: left;
+            display: inline-block;
+            background-color: antiquewhite;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            
+        }
+        .box{
+            width: 200px;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="HH">00</div>
+        <div>:</div>
+        <div id="mm">00</div>
+        <div>:</div>
+        <div id="ss">00</div>
+    </div>
+
+    <script>
+        window.onload=function(){
+            // 定时器，每隔1秒 执行1次
+            setInterval(function(){
+                var dt=new Date();
+                var HH=dt.getHours();
+                var mm=dt.getMinutes();
+                var ss=dt.getSeconds();
+                console.log(HH,mm,ss);
+
+                $("#HH").html(HH);
+                $("#mm").html(mm);
+                $("#ss").html(ss);
+
+            },1000)
+        }
+    </script>
+    
+</body>
+</html>
