@@ -1,4 +1,4 @@
-# Learning_Node.js
+# Learning_Node.js_and_mySQL
 # Day1
 ## 浏览器中的JavaScript运行环境
 JavaScript做后端开发需要使用Node.js 。
@@ -299,4 +299,4 @@ npm账号注册完成之后，可以在终端中执行npm login命令，
 2. npm unpublish删除的包，在24小时内不允许重复发布；
 3. 发布包的时候要慎重，尽量不要往npm上发布没有意义的包。
 
-# Learning_Node.js_and_mySQL
+
