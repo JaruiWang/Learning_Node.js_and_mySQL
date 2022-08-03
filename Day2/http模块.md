@@ -40,6 +40,20 @@ http协议的默认端口是80，80端口可以被省略。
 2. 创建web服务器实例
 3. 为服务器实例绑定request事件，监听客户端的请求；
 4. 启动服务器。
+```js
+    // 1. 导入http模块
+    const http=require('http');
+    // 2. 创建web服务器实例
+    const server=http.createServer();
+    // 3. 为服务器实例绑定request事件，监听客户端的请求；
+    server.on('request',function(req,res){
+        console.log('Someone visit our web server')
+    })
+    // 4. 启动服务器。
+    server.listen(8080,function(){
+        console.log('server running at http://127.0.0.1:8080')
+    })
+```
 
 ### 模板字符串
 模板字符串使用反引号 (` `) 来代替普通字符串中的用双引号和单引号。模板字符串可以包含特定语法（${expression}）的占位符。
