@@ -173,7 +173,7 @@ app.use('/api',router);
 
 ## 中间件
 Express的中间件本质上是一个function处理函数,格式如下：
-app.get('/',function(req,res,next){
+app.use('/',function(req,res,next){
     next();
 })
 中间件函数的形参列表中，必须包含next函数。
